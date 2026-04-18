@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Inicio</title>
+    <body style="transform: scale(0.9); transform-origin: top;">
+    </body>   
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffffff, #e3e6e8);
+            color: #333;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            text-align: center;
+            max-width: 1000px;
+            margin: 20px;
+        }
+
+        .logo img {
+            width: 180px;
+            height: auto;
+            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+            transition: transform 0.5s;
+        }
+
+        .logo img:hover {
+            transform: rotate(10deg);
+        }
+
+        .slogan {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #003366;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu a {
+            text-decoration: none;
+            background-color: #003366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+
+        .menu a:hover {
+            background-color: #001f4d;
+            transform: scale(1.05);
+        }
+
+        .about {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f4f7fb;
+            border-radius: 8px;
+        }
+
+        .about h2 {
+            font-size: 28px;
+            color: #003366;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .benefits {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .benefits .benefit {
+            width: 30%;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .benefits .benefit h3 {
+            font-size: 24px;
+            color: #003366;
+        }
+
+        .benefits .benefit p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer a {
+            color: #003366;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="logo 2.png" alt="Logo"> <!-- Reemplaza con la ruta de tu logo -->
+        </div>
+        <div class="slogan">Navega, Aprende y Conduce Seguro</div>
+        <div class="menu">
+            <a href="prueba de mapa.html">Mapa</a>
+            <a href="quiz.html">Quiz</a>
+        </div>
+        
+        <!-- Sección Acerca de -->
+        <div class="about">
+            <h2>Acerca de Nosotros</h2>
+            <p>Somos una plataforma diseñada para ayudar a los conductores a mejorar sus habilidades y conocimientos en la carretera. Nuestra misión es promover la seguridad vial y proporcionar herramientas útiles para cada conductor.</p>
+        </div>
+
+        <!-- Sección Beneficios -->
+        <div class="benefits">
+            <div class="benefit">
+                <h3>Aprende de forma interactiva</h3>
+                <p style="text-align: justify;">Ofrecemos contenido interactivo que facilita el aprendizaje de las normas viales a través de quizzes y mapas detallados.</p>
+            </div>
+            <div class="benefit">
+                <h3>Accesibilidad total</h3>
+                <p style="text-align: justify;">Accede a la plataforma desde cualquier dispositivo, ya sea tu ordenador o teléfono móvil, para que puedas aprender en cualquier momento y lugar.</p>
+            </div>
+            <div class="benefit">
+                <h3>Mejora tu seguridad</h3>
+                <p style="text-align: justify;"></ptyle>Con nuestras herramientas y recursos, te preparamos para conducir de manera más segura y eficiente, minimizando los riesgos en la carretera.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Todos los derechos reservados | <a href="privacy.html">Política de privacidad</a></p>
+    </div>
+
+</body>
+</html>
