@@ -1,0 +1,215 @@
+
+<html lang="es">
+<head>
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+/* FONDO GENERAL */
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+
+/* LOGO HD SIN PERDER CALIDAD */
+background-color:#020617;
+background-image:
+linear-gradient(rgba(2,6,23,0.15), rgba(15,23,42,0.20)),
+url("logo del proyecto.png");
+
+background-size:contain;   /* 🔥 CLAVE */
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+/* CONTENEDOR APP */
+.app{
+width:95%;
+max-width:900px;
+background:#111827;
+border-radius:20px;
+padding:40px;
+box-shadow:0 0 40px rgba(0,0,0,.6);
+animation:fade 1s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;}
+}
+
+/* HEADER */
+header{
+text-align:center;
+margin-bottom:40px;
+}
+
+header img{
+width:110px;
+margin-bottom:10px;
+}
+
+header h1{
+font-size:32px;
+color:#facc15;
+}
+
+header p{
+opacity:.8;
+}
+
+/* DASHBOARD */
+.dashboard{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+/* TARJETAS */
+.card{
+background:#1e293b;
+padding:45px;
+border-radius:15px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+text-decoration:none;
+color:white;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:scale(1.06);
+background:#facc15;
+color:black;
+box-shadow:0 0 20px #facc15;
+}
+
+/* ICONOS */
+.icon{
+font-size:40px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
+footer{
+margin-top:35px;
+text-align:center;
+font-size:14px;
+opacity:.6;
+}
+
+/* MODAL */
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:#111827;
+padding:30px;
+border-radius:15px;
+text-align:center;
+max-width:400px;
+}
+
+button{
+margin-top:20px;
+padding:10px 20px;
+border:none;
+background:#facc15;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<header>
+<h1>🚶 SAFE ROUTE</h1>
+<p>Sistema Inteligente de Ruta Segura</p>
+</header>
+
+<div class="dashboard">
+
+<a href="cursos.html" class="card">
+<div class="icon">📚</div>
+Cursos
+</a>
+
+<a href="cuestionario.html" class="card">
+<div class="icon">📝</div>
+Cuestionario
+</a>
+
+<a href="Mapa Seguro.html" class="card">
+<div class="icon">🗺️</div>
+Mapa Seguro
+</a>
+
+<a href="Mi Progreso.html" class="card">
+<div class="icon">📊</div>
+Mi Progreso
+</a>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Safe Route | Proyecto de Seguridad Vial RD
+</footer>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<p id="text"></p>
+<button onclick="closeModal()">Cerrar</button>
+</div>
+</div>
+
+<script>
+
+function openSection(text){
+document.getElementById("text").innerText=text;
+document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+/* MAPA DEMO */
+function openMap(){
+window.open("https://www.google.com/maps");
+}
+
+</script>
+
+</body>
+</html>
